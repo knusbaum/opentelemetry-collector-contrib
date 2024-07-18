@@ -61,8 +61,6 @@ type TracesConfig struct {
 	// If enabling both causes the datadog connector to consume too many resources, try disabling `compute_stats_by_span_kind` first.
 	// A high cardinality of peer tags or APM resources can also contribute to higher CPU and memory consumption.
 	// You can check for the cardinality of these fields by making trace search queries in the Datadog UI.
-	// The default list of peer tags can be found in https://github.com/DataDog/datadog-agent/blob/main/pkg/trace/stats/concentrator.go.
-	PeerTagsAggregation bool `mapstructure:"peer_tags_aggregation"`
 
 	// [BETA] Optional list of supplementary peer tags that go beyond the defaults. The Datadog backend validates all tags
 	// and will drop ones that are unapproved. The default set of peer tags can be found at

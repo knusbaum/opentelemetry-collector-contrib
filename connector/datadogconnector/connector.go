@@ -104,7 +104,6 @@ func getTraceAgentCfg(logger *zap.Logger, cfg TracesConfig, attributesTranslator
 	acfg.OTLPReceiver.SpanNameAsResourceName = cfg.SpanNameAsResourceName
 	acfg.Ignore["resource"] = cfg.IgnoreResources
 	acfg.ComputeStatsBySpanKind = cfg.ComputeStatsBySpanKind
-	acfg.PeerTagsAggregation = cfg.PeerTagsAggregation
 	acfg.PeerTags = cfg.PeerTags
 	if len(cfg.ResourceAttributesAsContainerTags) > 0 {
 		acfg.Features["enable_cid_stats"] = struct{}{}
